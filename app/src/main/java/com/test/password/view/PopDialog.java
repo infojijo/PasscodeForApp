@@ -4,14 +4,17 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.test.password.R;
 import com.test.password.util.Constants;
 import com.test.password.util.SharedPrefUtil;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
@@ -37,6 +40,15 @@ public class PopDialog extends AppCompatDialogFragment {
         builder.setView(view)
                 .setTitle(getTitleName(sharedPrefUtil.getScreenCounter()))
                 .setCancelable(false)
+                .setOnKeyListener(new DialogInterface.OnKeyListener() {
+                    @Override
+                    public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
+                            return true;
+                        }
+                        return false;
+                    }
+                })
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -95,4 +107,5 @@ public class PopDialog extends AppCompatDialogFragment {
 
         void messageToActivity(String message);
     }
+
 }

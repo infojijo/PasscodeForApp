@@ -75,6 +75,7 @@ public class SettingsActivity extends AppCompatActivity
                 } else {
                     switchLocker.setChecked(false);
                     sharedPrefUtil.setSecure(false);
+                    presenter.updatePasswordMismatch("", 0);
                 }
             }
         });
@@ -112,12 +113,12 @@ public class SettingsActivity extends AppCompatActivity
     @Override
     public void messageToActivity(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        finish();
     }
 
     /**
      * @param password
-     * @param screen
-     * Compare each passcode status to decide the next steps to proceed with.
+     * @param screen   Compare each passcode status to decide the next steps to proceed with.
      */
     @Override
     public void passCodeCompare(String password, int screen) {
@@ -193,8 +194,7 @@ public class SettingsActivity extends AppCompatActivity
 
     /**
      * @param message
-     * @param status
-     * Method callbacks from presenter inroder to display status messages.
+     * @param status  Method callbacks from presenter inroder to display status messages.
      */
     @Override
     public void updateStatusMessage(String message, int status) {
