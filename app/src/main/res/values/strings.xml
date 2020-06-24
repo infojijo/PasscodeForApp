@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Passcode your app</string>
+    <string name="retry">Retry Passcode</string>
+    <string name="too_many_failed">Incorrect Passcode \nToo many failed attempts.\nApp is locked for 1 minute</string>
+    <string name="relaunch">Incorrect Passcode.\nRelaunch app to try again</string>
+    <string name="password_matched">Passcode Matched - Logged in</string>
+    <string name="passcode_matched">Passcode Matched</string>
+    <string name="incorrect_password">Incorrect Passcode</string>
+    <string name="activate_passcode">ACTIVATE PASSCODE</string>
+    <string name="settings">SETTINGS</string>
+    <string name="passcode_text_one">NEW PASSCODE</string>
+    <string name="passcode_text_two">CONFIRM PASSCODE</string>
+    <string name="passcode_text_three">ENTER PASSCODE</string>
+    <string name="ok">OK</string>
+    <string name="no_passcode_entered">No Passcode found</string>
+</resources>

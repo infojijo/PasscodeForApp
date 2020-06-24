@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SettingsActivity">
+
+    <Switch
+        android:id="@+id/switchLock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="@dimen/app_margin_normal"
+        android:layout_marginRight="@dimen/app_margin_normal"
+        android:text="@string/activate_passcode"
+        android:textSize="@dimen/app_text_size_normal" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/settings"
+        android:textSize="@dimen/app_text_size_normal"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchLock"
+        android:layout_marginLeft="@dimen/app_margin_normal"
+        android:layout_marginRight="@dimen/app_margin_normal"
+        android:gravity="center"
+        android:textColor="@color/coloRed"
+        android:textSize="@dimen/app_text_size_small" />
+</RelativeLayout>
